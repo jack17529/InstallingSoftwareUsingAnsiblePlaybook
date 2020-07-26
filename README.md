@@ -1,6 +1,6 @@
 # InstallingSoftwareUsingAnsible
 
-This is how I helped `Senior Lab Technology Manager` to install packages in all the labs using his main computer. I automated the process of installing packages using ansible playbook on around 150 computers present in my college.  
+This is how I helped `Senior Lab Manager` to install packages in all the labs using his main computer. I automated the process of installing packages using ansible playbook on around 150 computers present in my college.  
 This playbook installs `nmap` and `nginx` packages directly from the net and install java from the `java rpm file` downloaded by the master node by pushing it to the remote machines. 
 
 ## Instructions
