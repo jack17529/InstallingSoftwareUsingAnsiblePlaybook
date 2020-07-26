@@ -1,0 +1,28 @@
+---
+- name: setup application server
+  hosts: web
+  remote_user: root
+  become: true
+
+  tasks:
+  - name: enable epel for installtion
+    yum: name=epel-release state=present
+
+  - name: install basic tools
+    yum: "{{ packages }}"
+  vars:
+    packages:
+    - nmap
+    - nginx
+      
+  - name: install java - push package to nodes
+    copy:
+      src: jdk-14.0.2_linux-x64_bin.rpm
+      dest: /opt/jdk-14.0.2_linux-x64_bin.rpm
+      owner: root
+      group: root
+      mode: '0744'
+      
+  - name: install java - installed the pushed file
+    yum: name=/opt/jdk-14.0.2_linux-x64_bin.rpm state=present
+
