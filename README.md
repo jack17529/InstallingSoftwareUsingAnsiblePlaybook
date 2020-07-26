@@ -1,5 +1,7 @@
 # InstallingSoftwareUsingAnsible
 
+This is how I helped `Senior Lab Technology Manager` to install packages in all the labs using his main computer. I automated the process of installing packages using ansible playbook on over 200 computers present in my college.
+
 ## Instructions
 
 1. Configure config file. `cat ~/.ansible.cfg`
